@@ -630,7 +630,7 @@
         for (var i = 0; i < totalJLPlayer; i++) {
             idElement = 'jlplayer-' + Math.floor(Math.random() * 100000000);
             document.getElementsByClassName('jlplayer-video')[i].id = idElement;
-            // new jlPlayer(idElement);
+            new jlPlayer(idElement);
         }
 
     }
