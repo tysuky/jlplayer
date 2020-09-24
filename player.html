@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="shortcut icon" href="https://www.jetersonlordano.com.br/jlplayer/images/favicon.png">
+
+    <!-- Link style jlplayer.css -->
+    <link rel="stylesheet" href="jlplayer.css">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+        }
+
+        .video-container {
+            width: 500px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="video-container">
+
+        <!-- Chamar elemento vídeo com class jlplayer-video -->
+        <div id="jlplayer-video-0" class="jlplayer-video jlplayer-cursor-show jlplayer-fullscreen-off">
+
+            <!-- Vídeo -->
+            <video preload="none" data-pid="video">
+                <source src="https://www.jetersonlordano.com.br/jlplayer/beach.mp4" type="video/mp4">
+                <!-- <track kind="captions" src="legenda.vtt" default> -->
+            </video>
+
+            <!-- Loader -->
+            <div class="jlplayer-loader" style="display: none;" data.pid="loader">
+                <div class="jlplayer-loader-box">
+                    <div class="jlplayer-gif">
+                        <div class="jlplayer-spinner">
+                            <div class="jlplayer-bounce1"></div>
+                            <div class="jlplayer-bounce2"></div>
+                            <div class="jlplayer-bounce3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão do centro -->
+            <button class="jlplayer-play-center" style="display: block;" data-pid="center">
+                <svg viewBox="0 0 12 18" >
+                    <path
+                        d="M13.6,8.1L1.9,0.2C1.1-0.3,0,0.2,0,1.1v15.7c0,0.9,1.1,1.5,1.9,0.9l11.7-7.9C14.1,9.4,14.1,8.6,13.6,8.1L13.6,8.1z">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Conteúdo da legenda -->
+            <div class="jlplayer-legends"><span></span></div>
+
+
+
+            <!-- Controles -->
+            <div class="jlplayer-controls jlplayer-controls-show">
+
+                <button type="button" class="jlplayer-play" data-pid="play">
+                    <svg viewBox="0 0 12 18">
+                        <path
+                            d="M13.6,8.1L1.9,0.2C1.1-0.3,0,0.2,0,1.1v15.7c0,0.9,1.1,1.5,1.9,0.9l11.7-7.9C14.1,9.4,14.1,8.6,13.6,8.1L13.6,8.1z">
+                        </path>
+                    </svg><span class="jlplayer-tooltip">Iniciar</span>
+                </button>
+
+                <div class="jlplayer-presentation" data-pid="presentation">
+                    <input class="jlplayer-rangeprog" type="range" min="0" max="100" step="0.1" value="0" data-pid="progressRange">
+                    <div class="jlplayer-progress">
+                        <span class="jlplayer-pbuffer" data-pid="buffer"></span>
+                        <span class="jlplayer-pplayed" data-pid="progress"></span>
+                    </div>
+                    <span class="jlplayer-tooltip" data-pid="timeTooltip">00:06</span>
+                </div>
+                <span class="jlplayer-time" data-pid="time">00:00</span>
+
+                <!-- Botão volume -->
+                <button type="button" class="jlplayer-vol">
+                    <svg viewBox="0 0 18 18">
+                        <path
+                            d="M15.6 3.3c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4C15.4 5.9 16 7.4 16 9c0 1.6-.6 3.1-1.8 4.3-.4.4-.4 1 0 1.4.2.2.5.3.7.3.3 0 .5-.1.7-.3C17.1 13.2 18 11.2 18 9s-.9-4.2-2.4-5.7z">
+                        </path>
+                        <path
+                            d="M11.282 5.282a.909.909 0 0 0 0 1.316c.735.735.995 1.458.995 2.402 0 .936-.425 1.917-.995 2.487a.909.909 0 0 0 0 1.316c.145.145.636.262 1.018.156a.725.725 0 0 0 .298-.156C13.773 11.733 14.13 10.16 14.13 9c0-.17-.002-.34-.011-.51-.053-.992-.319-2.005-1.522-3.208a.909.909 0 0 0-1.316 0zM3.786 6.008H.714C.286 6.008 0 6.31 0 6.76v4.512c0 .452.286.752.714.752h3.072l4.071 3.858c.5.3 1.143 0 1.143-.602V2.752c0-.601-.643-.977-1.143-.601L3.786 6.008z">
+                        </path>
+                    </svg>
+                    <span class="jlplayer-tooltip">Desativar</span>
+                </button>
+
+
+                <!-- Slider Volume -->
+                <div class="jlplayer-volume">
+                    <input class="jlplayer-rangevol" type="range" min="0" max="1" value="1" step="0.01">
+                    <div class="jlplayer-progress"><span class="jlplayer-setvolume" style="width: 100%;"></span></div>
+                </div>
+
+                <!-- Botão Fullscreen -->
+                <button type="button" class="jlplayer-screen">
+                    <svg viewBox="0 0 18 18">
+                        <path d="M10 3h3.6l-4 4L11 8.4l4-4V8h2V1h-7zM7 9.6l-4 4V10H1v7h7v-2H4.4l4-4z"></path>
+                    </svg>
+                    <span class="jlplayer-tooltip">Tela Cheia</span>
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="refactor.js" async></script>
+
+</body>
+
+</html>
