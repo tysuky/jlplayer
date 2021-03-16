@@ -1,2 +1,2 @@
 # jlPlayer
-A simple custom HTML5 video player
+Um simples reprodutor de áudio e vídeo html5 personalizado
